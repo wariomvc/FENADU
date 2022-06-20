@@ -1,0 +1,39 @@
+@use 'base/variables' as v;
+@use 'base/paleta' as color;
+
+.seccion{
+    height: 100vh;
+    
+    
+    position: relative;
+    
+    
+    .seccion__info{
+        width: 100%;
+        height: 35rem;
+
+        background-color: rgba( color.$color-blanco, $alpha: .8) ;
+        position: absolute;
+        top: 30vh;
+        padding: 5rem 40rem;
+        box-shadow: rgba(color.$color-primary-1, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+    &.artistas{
+        background-image: url('/build/img/artista.jpg'); 
+        justify-content: flex-start;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    &.eventos{
+        background-image: url('/build/img/eventos.jpg'); 
+        justify-content: flex-end;
+    }
+    &.calendario{
+        background-image: url('/build/img/calendario.jpg'); 
+        justify-content: flex-start;
+    }
+}
+.info__boton{
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,23 @@
+@use 'base/variables' as v;
+@use 'base/paleta' as color;
+
+.footer{
+    width: 100%;
+    background-color: color.$color-primary-4;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    .fenadu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    p{
+        color:color.$color-blanco;
+
+    }
+    .derechos{
+
+    }
+}

@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feria Nacional de Durango 2022</title>
+    <link rel="stylesheet" href="build/css/app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -13,7 +15,7 @@
         <header class="hero">
             <div class="navegacion">
                 <nav class="enlaces">
-                    <a href="/">Inicio</a>
+                    <a href="/" class="actual">Inicio</a>
                     <a href="artistas.html">Artistas</a>
                     <a href="eventos.html">Eventos</a>
                     <a href="calendario.html">Calendario</a>
@@ -24,13 +26,14 @@
                 <h3>Del 15 al 31 de Julio</h3>
             </div>
             <div class="hero__boton">
-                🡳
+                <a id="boton_toartistas">🡳</a>
+
             </div>
         </header>
     </div>
     <div class="contenedor">
-        <section class="secccion">
-            <div class="seccion__info">
+        <section class="seccion artistas" id="artistas">
+            <div class="seccion__info izquierda">
                 <div class="info__titulo">
                     <h2>Artistas</h2>
                 </div>
@@ -39,15 +42,18 @@
                         nihil unde doloremque repellendus vero quas iste commodi cumque nobis officia, modi minus vitae
                         fugiat! Minus, nesciunt?</p>
                 </div>
+                
                 <div class="info__boton">
-                    <div class="boton">
-                        <a href="artistas.html">Lista de Invitados</a>
+                    <a href="artistas.html" class="boton">Lista de Invitados</a>
+                    <div class="info__botonnext">
+                        <a id="boton_toeventos">🡳</a>
+        
                     </div>
                 </div>
             </div>
         </section>
-        <section class="secccion">
-            <div class="seccion__info">
+        <section class="seccion eventos" id="eventos">
+            <div class="seccion__info izquierda">
                 <div class="info__titulo">
                     <h2>Eventos Especiales</h2>
                 </div>
@@ -57,13 +63,15 @@
                         fugiat! Minus, nesciunt?</p>
                 </div>
                 <div class="info__boton">
-                    <div class="boton">
-                        <a href="artistas.html">Lista de Eventos</a>
+                    <a href="eventos.html" class="boton">Ver Eventods|</a>
+                    <div class="info__botonnext">
+                        <a id="boton_tocalendario">🡳</a>
                     </div>
+    
                 </div>
             </div>
         </section>
-        <section class="secccion">
+        <section class="seccion calendario" id="calendario">
             <div class="seccion__info">
                 <div class="info__titulo">
                     <h2>Calendario</h2>
@@ -74,9 +82,7 @@
                         fugiat! Minus, nesciunt?</p>
                 </div>
                 <div class="info__boton">
-                    <div class="boton">
-                        <a href="artistas.html">Ver Calendario</a>
-                    </div>
+                    <a href="calendario.html" class="boton">Ver Calendario</a>
                 </div>
             </div>
         </section>
@@ -84,23 +90,26 @@
     <footer class="footer">
         <div class="fenadu">
             <div class="fenadu__titulo">
-                <p>Feria Nacional de Durnago 2022</p>
-            </div>
-            <div class="fenadu_cuentas">
-                <p>Cuentas Oficiales FENADU 2022</p>
+                <p>FENADU Cuentas Oficiales</p>
             </div>
             <div class="fenadu__iconos">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#7bc62d" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#7bc62d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FE004D" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
                   </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FE004D" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                  </svg>
             </div>
         </div>
+        <div class="derechos">
+            <p>Todos los derechos reservados 2022</p>
+            <p>Desarrollado por <a href="mail://wario.mvc@gmail.com">wariomvc</a></p>
+        </div>
     </footer>
+    <script src="/build/js/bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 
 </html>

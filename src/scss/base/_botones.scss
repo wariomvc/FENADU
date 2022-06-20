@@ -1,0 +1,41 @@
+@use 'base/variables' as v;
+@use 'base/paleta' as color;
+
+.info__boton{
+    margin: 2rem 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.boton{
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    border: 1px solid color.$color-negro;
+}
+.boton:hover{
+    color: color.$color-blanco;
+    background-color: color.$color-secondary-1-0;
+}
+
+.info__botonnext{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid color.$color-gris-3;
+    border-radius: 50%;
+    text-align: center;
+    background-color: transparent;
+    transition: all;
+    transition-duration: .6s;
+    font-size: 3rem;
+    a{
+        color:color.$color-blanco;
+    }
+}
+.info__botonnext:hover{
+    border-color: color.$color-gris-0;
+    background-color:  color.$color-gris-1;
+    
+
+}
