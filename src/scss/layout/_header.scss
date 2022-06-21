@@ -1,44 +1,56 @@
-@use 'base/variables' as v;
-@use 'base/paleta' as color;
+@use '/base/variables' as v;
+@use '/base/paleta' as color;
 
 .hero {
     width: 100%;
     height: 100vh;
-    background-color: color.$color-primary-4 ;
+    background-color: color.$color-primary-4;
 
-    background: linear-gradient(0deg, rgba(55,14,77,0.8603816526610644) 0%, rgba(9,9,121,0.5858718487394958) 48%, rgba(0,212,255,0.45702030812324934) 100%), url('/build/img/globos.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+    &.indice {
+        background: linear-gradient(0deg, rgba(55, 14, 77, 0.8603816526610644) 0%, rgba(9, 9, 121, 0.5858718487394958) 48%, rgba(0, 212, 255, 0.45702030812324934) 100%), url('/build/img/globos.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &.artistas {
+        background: linear-gradient(0deg, rgba(55, 14, 77, 0.8603816526610644) 0%, rgba(9, 9, 121, 0.5858718487394958) 48%, rgba(0, 212, 255, 0.45702030812324934) 100%), url('/build/img/artista.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+
     transition: all;
     transition-duration: 5s;
-    .hero__titulo{
+
+    .hero__titulo {
         margin: 10rem auto 0 auto;
         display: flex;
         flex-direction: column;
-        color:color.$color-blanco;
+        color: color.$color-blanco;
         justify-content: center;
-            align-items: center;
-            text-align: center;
-        h1{
+        align-items: center;
+        text-align: center;
 
-            
+        .titulo__secundario{
+            color:color.$color-secondary-2-3;
         }
     }
-    
+
 
 }
-.hero:hover{
+
+.hero:hover {
     //background-position: right bottom;
 }
 
-.hero__boton{
+.hero__boton {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 5rem;
     height: 5rem;
-    border: 1px solid color.$color-gris-3;
+    border: 1px solid color.$color-secondary-1-1;
     border-radius: 50%;
     text-align: center;
     margin: 0 auto;
@@ -46,42 +58,50 @@
     transition: all;
     transition-duration: .6s;
     font-size: 3rem;
-    a{
-        color:color.$color-gris-1;
+
+    a {
+        color: color.$color-blanco;
     }
 }
-.hero__boton:hover{
-    border-color: color.$color-gris-0;
-    background-color:  color.$color-gris-2;
+
+.hero__boton:hover {
+
+    background-color: color.$color-secondary-1-0;
+    cursor: pointer;
 
 }
-.navegacion{
+
+.navegacion {
     width: 100%;
     display: flex;
-    justify-content:flex-end;
+    justify-content: flex-end;
     margin: 0 auto;
     padding: 2rem;
     border-radius: 10px;
-    
+
     //background-color: rgba($color: color.$color-primary-0, $alpha: .7);
-   //box-shadow: 0 10px 40px color.$color-primary-0;
+    //box-shadow: 0 10px 40px color.$color-primary-0;
     text-align: center;
-    .enlaces{
+
+    .enlaces {
         font-size: 2.2rem;
         font-weight: 300;
-        a{
+
+        a {
             padding: 0 1rem;
             color: color.$color-blanco;
             transition: all;
             transition-duration: 1s;
-            &.actual{
+
+            &.actual {
                 color: color.$color-blanco;
                 //background-color: color.$color-secondary-1-0;
             }
         }
-        a:hover{
+
+        a:hover {
             background-color: color.$color-secondary-1-0;
         }
     }
-    
+
 }

@@ -1,0 +1,108 @@
+@use '../base/paleta' as color;
+
+
+.genero  {
+  height: 30rem;
+  padding: 5rem 20rem;
+
+
+  .genero__titulo, .genero__texto {
+    color: color.$color-blanco;
+  }
+  &.rosa{
+    background-color: color.$color-secondary-1-3;
+  }
+  &.azul{
+    background-color: color.$color-primary-4;
+  }
+}
+
+.genero__lista {
+  height: 60rem;
+  width: 100%;
+  padding: 2rem;
+
+
+&.rosa{
+  background: linear-gradient(180deg, rgba(255,0,77,0.8855742980786064) 0%, rgba(255,138,173,0.43459390592174374) 39%, rgba(14,160,255,0.45700286950717783) 77%, rgba(58,177,255,0.46540623085171573) 100%), url("/build/img/velaria.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+  &.azul{
+    background: linear-gradient(180deg, rgba(255,0,77,0.8855742980786064) 0%, rgba(255,138,173,0.43459390592174374) 39%, rgba(14,160,255,0.45700286950717783) 77%, rgba(58,177,255,0.46540623085171573) 100%), url("/build/img/palenque.jpeg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.lista__cards {
+
+  display: flex;
+  column-gap: 3rem;
+  justify-items: center;
+  overflow: hidden;
+}
+
+
+.card {
+  width: 30rem;
+  background-color: rgba(color.$color-blanco, 0.8);
+  color: color.$color-blanco;
+
+  border-radius: 1rem;
+
+  .card__imagen {
+    width: 30rem;
+    height: 18rem;
+    overflow: hidden;
+
+    img {
+
+    }
+  }
+
+  .card__titulo {
+
+    text-align: center;
+    h3{
+      color: color.$color-negro;
+      margin: 0;
+    }
+  }
+
+  .card__descripcion {
+
+    padding: 2rem;
+
+    text-align: justify;
+
+    p {
+
+      font-size: 1.7rem;
+    }
+  }
+
+}
+.card__footer{
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  .card__fecha{
+    font-weight: bold;
+    color: color.$color-secondary-1-4;
+
+  }
+}
+
+.boton__left{
+  display: inline;
+  height: 5rem;
+  cursor: pointer;
+}
+.boton__left::after{
+  content: "❮";
+}
