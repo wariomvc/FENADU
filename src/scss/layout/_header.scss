@@ -7,14 +7,14 @@
     background-color: color.$color-primary-4;
 
     &.indice {
-        background: linear-gradient(0deg, rgba(55, 14, 77, 0.8603816526610644) 0%, rgba(9, 9, 121, 0.5858718487394958) 48%, rgba(0, 212, 255, 0.45702030812324934) 100%), url('build/img/globos.jpg');
+        background: linear-gradient(0deg, rgba(55, 14, 77, 0.8603816526610644) 0%, rgba(9, 9, 121, 0.5858718487394958) 48%, rgba(0, 212, 255, 0.45702030812324934) 100%), url('/build/img/globos.jpg');
         background-attachment: fixed;
         background-size: cover;
         background-position: center;
     }
 
     &.artistas {
-        background: linear-gradient(0deg, rgba(55, 14, 77, 0.8603816526610644) 0%, rgba(9, 9, 121, 0.5858718487394958) 48%, rgba(0, 212, 255, 0.45702030812324934) 100%), url('build/img/artista.jpg');
+        background: linear-gradient(0deg, rgba(55, 14, 77, 0.8603816526610644) 0%, rgba(9, 9, 121, 0.5858718487394958) 48%, rgba(0, 212, 255, 0.45702030812324934) 100%), url('/build/img/artista.jpg');
         background-attachment: fixed;
         background-size: cover;
         background-position: center;
@@ -32,12 +32,13 @@
         align-items: center;
         text-align: center;
 
-        .titulo__secundario{
-            color: color.$color-secondary-2-3;
-        }
+        
     }
 
 
+}
+.titulo__secundario{
+    color: color.$color-secondary-2-3;
 }
 
 .hero:hover {

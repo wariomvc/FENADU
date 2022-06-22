@@ -39,18 +39,10 @@ function eventListeners() {
         });
     })
 
-   /* botonLeft.addEventListener('mouseenter', (e) => {
-        listaCardsScroll(e, -5);
-    });
-    botonLeft.addEventListener('mouseleave', () => {
-        clearInterval(scrollfuncion);
-    });*/
-    botonRight.addEventListener('mouseenter', (e) => {
-        listaCardsScroll(e, 5);
-    });
-    botonRight.addEventListener('mouseleave', () => {
-        clearInterval(scrollfuncion);
-    });
+    botoncalendario = document.querySelectorAll('.calendario__dia');
+    botoncalendario.forEach(boton=>{
+        boton.addEventListener('click',cargarVideo)
+    })
     //boton_toartistas.addEventListener('click', (e)=>moveTo(e,"artistas"));
     //boton_toeventos.addEventListener('click', (e)=>moveTo(e,"eventos"));
     //boton_tocalendario.addEventListener('click', (e)=>moveTo(e,"calendario"));
@@ -59,7 +51,35 @@ function eventListeners() {
     //window.addEventListener('scroll', mousescroolling)
 
 }
+var playerYotube 
+function cargarVideo(e){
+    if(playerYotube){
+        playerYotube.destroy();
+    }
+    videoUrl.forEach(videoData=>{
+        if(videoData.dia == e.target.innerText){
+            playerYotube = new YT.Player('player',{
+                videoId: videoData.velaria.url,
+                events:{
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                },
+                playerVars:{ 'autoplay':0, 'controls':0}
+            })
 
+        }
+    })
+    console.log(e.target.innerText);
+    //onYouTubeIframeAPIReady()
+}
+
+/* function onYouTubeIframeAPIReady(urlvideo) {
+    player = new YT.Player('player', {
+        events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+        }
+    }); */
 function scrolling(element, nScroll) {
     console.log(nScroll);
     element.scrollLeft += nScroll;
