@@ -51,22 +51,30 @@ function eventListeners() {
     //window.addEventListener('scroll', mousescroolling)
 
 }
-var playerYotube 
+var playerYotube;
 function cargarVideo(e){
     if(playerYotube){
         playerYotube.destroy();
     }
     videoUrl.forEach(videoData=>{
+        console.log(videoData);
         if(videoData.dia == e.target.innerText){
             playerYotube = new YT.Player('player',{
                 videoId: videoData.velaria.url,
+                height: '225',
+                width: '400',
                 events:{
                     'onReady': onPlayerReady,
                     'onStateChange': onPlayerStateChange
                 },
                 playerVars:{ 'autoplay':0, 'controls':0}
             })
-
+            artista = document.querySelector('.evento__artista');
+            descripcion = document.querySelector('.evento__texto');
+            fecha = document.querySelector('.evento__titulo');
+            artista.innerHTML = videoData.velaria.artista;
+            descripcion.innerHTML = videoData.velaria.txt;
+            fecha.innerHTML = "Eventos para el "+ videoData.dia + " de Julio";
         }
     })
     console.log(e.target.innerText);
