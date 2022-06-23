@@ -62,9 +62,12 @@ function cargarVideo(e) {
     if(palenquePlayer){
         palenquePlayer.destroy();
     }
+    let velaria = document.querySelector('.velaria');
+    let palenqueDOM = document.querySelector('.palenque');
     videoUrl.forEach(videoData => {
-        console.log(videoData);
         if (videoData.dia == e.target.innerText) {
+
+            velaria.classList.add('mostrar');
             playerYotube = new YT.Player('player', {
                 videoId: videoData.velaria.url,
                 height: '225',
@@ -86,21 +89,36 @@ function cargarVideo(e) {
                     },
                     playerVars: {'autoplay': 0, 'controls': 0}
                 })
-                palenqueDOM = document.querySelector('.palenque');
-                artista_palenque = palenqueDOM.querySelector('.evento__artista');
-                descripcion_palenque = palenqueDOM.querySelector('.evento__texto');
+                palenqueDOM.classList.add('mostrar');
+                let artista_palenque = palenqueDOM.querySelector('.evento__artista');
+                let descripcion_palenque = palenqueDOM.querySelector('.evento__texto');
                 artista_palenque.innerHTML = videoData.palenque.artista;
                 descripcion_palenque.innerHTML = videoData.palenque.txt;
 
             }else{
-
+                palenqueDOM.classList.remove('mostrar');
             }
-            artista_velaria = document.querySelector('.evento__artista');
-            descripcion_velaria = document.querySelector('.evento__texto');
-            fecha = document.querySelector('.evento__titulo');
+            let artista_velaria = document.querySelector('.evento__artista');
+            let descripcion_velaria = document.querySelector('.evento__texto');
+            let fecha = document.querySelector('.evento__titulo');
             artista_velaria.innerHTML = videoData.velaria.artista;
             descripcion_velaria.innerHTML = videoData.velaria.txt;
             fecha.innerHTML = "Eventos para el " + videoData.dia + " de Julio";
+            for (const videoDataKey in videoData.velaria.redes) {
+
+                let enlaceRedElement = velaria.querySelector('.'+videoDataKey);
+
+                enlaceRedElement.attributes['href'].value = videoData.velaria.redes[videoDataKey];
+                enlaceRedElement.parentElement.classList.add('visible');
+            }
+            for (const videoDataKey in videoData.palenque.redes) {
+
+                let enlaceRedElement = palenqueDOM.querySelector('.'+videoDataKey);
+
+                enlaceRedElement.attributes['href'].value = videoData.velaria.redes[videoDataKey];
+                enlaceRedElement.parentElement.classList.add('visible');
+            }
+
 
         }
     })
