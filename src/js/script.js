@@ -7,18 +7,18 @@ document.addEventListener('DOMContentLoaded', function () {
 var scrollingState = false;
 
 function eventListeners() {
-    enlaces = document.querySelectorAll("a[href^='#']");
+    let enlaces = document.querySelectorAll("a[href^='#']");
     enlaces.forEach(enlace => {
         enlace.addEventListener('click', scroller);
     })
-    boton_toartistas = document.querySelector('#boton_toartistas');
-    boton_toeventos = document.querySelector('#boton_toeventos');
-    boton_tocalendario = document.querySelector('#boton_tocalendario');
+    let boton_toartistas = document.querySelector('#boton_toartistas');
+    let boton_toeventos = document.querySelector('#boton_toeventos');
+    let boton_tocalendario = document.querySelector('#boton_tocalendario');
 
-    botonLeft = document.querySelectorAll(".boton__left");
-    botonRight = document.querySelectorAll(".boton__right");
+    let botonLeft = document.querySelectorAll(".boton__left");
+    let botonRight = document.querySelectorAll(".boton__right");
 
-    botonLeft.forEach(boton=>{
+    botonLeft.forEach(boton => {
         let lista_cards = boton.parentNode.querySelector('.lista__cards');
 
         boton.addEventListener('mouseenter', (e) => {
@@ -28,7 +28,7 @@ function eventListeners() {
             clearInterval(scrollfuncion);
         });
     })
-    botonRight.forEach(boton=>{
+    botonRight.forEach(boton => {
         let lista_cards = boton.parentNode.querySelector('.lista__cards');
 
         boton.addEventListener('mouseenter', (e) => {
@@ -39,9 +39,9 @@ function eventListeners() {
         });
     })
 
-    botoncalendario = document.querySelectorAll('.calendario__dia');
-    botoncalendario.forEach(boton=>{
-        boton.addEventListener('click',cargarVideo)
+    let botoncalendario = document.querySelectorAll('.calendario__dia');
+    botoncalendario.forEach(boton => {
+        boton.addEventListener('click', cargarVideo)
     })
     //boton_toartistas.addEventListener('click', (e)=>moveTo(e,"artistas"));
     //boton_toeventos.addEventListener('click', (e)=>moveTo(e,"eventos"));
@@ -51,34 +51,60 @@ function eventListeners() {
     //window.addEventListener('scroll', mousescroolling)
 
 }
+
 var playerYotube;
-function cargarVideo(e){
-    if(playerYotube){
+var palenquePlayer;
+
+function cargarVideo(e) {
+    if (playerYotube) {
         playerYotube.destroy();
     }
-    videoUrl.forEach(videoData=>{
+    if(palenquePlayer){
+        palenquePlayer.destroy();
+    }
+    videoUrl.forEach(videoData => {
         console.log(videoData);
-        if(videoData.dia == e.target.innerText){
-            playerYotube = new YT.Player('player',{
+        if (videoData.dia == e.target.innerText) {
+            playerYotube = new YT.Player('player', {
                 videoId: videoData.velaria.url,
                 height: '225',
                 width: '400',
-                events:{
+                events: {
                     'onReady': onPlayerReady,
                     'onStateChange': onPlayerStateChange
                 },
-                playerVars:{ 'autoplay':0, 'controls':0}
-            })
-            artista = document.querySelector('.evento__artista');
-            descripcion = document.querySelector('.evento__texto');
+                playerVars: {'autoplay': 0, 'controls': 0}
+            });
+            if (videoData.palenque != null) {
+                palenquePlayer = new YT.Player('player_palenque', {
+                    videoId: videoData.palenque.url,
+                    height: '225',
+                    width: '400',
+                    events: {
+                        'onReady': onPlayerReady,
+                        'onStateChange': onPlayerStateChange
+                    },
+                    playerVars: {'autoplay': 0, 'controls': 0}
+                })
+                palenqueDOM = document.querySelector('.palenque');
+                artista_palenque = palenqueDOM.querySelector('.evento__artista');
+                descripcion_palenque = palenqueDOM.querySelector('.evento__texto');
+                artista_palenque.innerHTML = videoData.palenque.artista;
+                descripcion_palenque.innerHTML = videoData.palenque.txt;
+
+            }else{
+
+            }
+            artista_velaria = document.querySelector('.evento__artista');
+            descripcion_velaria = document.querySelector('.evento__texto');
             fecha = document.querySelector('.evento__titulo');
-            artista.innerHTML = videoData.velaria.artista;
-            descripcion.innerHTML = videoData.velaria.txt;
-            fecha.innerHTML = "Eventos para el "+ videoData.dia + " de Julio";
+            artista_velaria.innerHTML = videoData.velaria.artista;
+            descripcion_velaria.innerHTML = videoData.velaria.txt;
+            fecha.innerHTML = "Eventos para el " + videoData.dia + " de Julio";
+
         }
     })
-    console.log(e.target.innerText);
-    //onYouTubeIframeAPIReady()
+
 }
 
 /* function onYouTubeIframeAPIReady(urlvideo) {

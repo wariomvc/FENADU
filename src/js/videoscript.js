@@ -17,12 +17,20 @@ var videoUrl = [
             url: '3OuvIS4nrFI',
             artista: 'Julión Álvarez',
             txt: '  Julión Álvarez y su Norteño Banda será uno de los artistas encargados de inaugurar la Feria Nacional de Durango 2022 (Fenadu)',
+            redes:{
+                instagram: "https://www.instagram.com/lospasosdejulion",
+            }
 
         },
         velaria: {
             url: 'bIINZGNVMVA',
             artista: 'La Disnastia Aguilar',
-            txt: 'La fiesta de los duranguenses arrancará el 15 de julio con las voces de la dinastía Aguilar con Ángela, Pepe y Leonardo.'
+            txt: 'La fiesta de los duranguenses arrancará el 15 de julio con las voces de la dinastía Aguilar con Ángela, Pepe y Leonardo.',
+            redes: {
+                facebook: "https://www.facebook.com/pepeaguilaroficial",
+                twiter: "https://twitter.com/PepeAguilar",
+                instagram:"https://www.instagram.com/pepeaguilar_oficial"
+            },
         }
 
     },

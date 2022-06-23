@@ -24,7 +24,8 @@
 .eventos{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem
+  gap: 2rem;
+  position: relative;
 }
 .evento__info{
   display: grid;
@@ -33,6 +34,10 @@
   height: 100%;
   padding: 1rem;
   border-radius: 1rem;
+
+}
+.velaria{
+
 }
 
 .evento__descripcion{
@@ -97,4 +102,18 @@
   display: flex;
   justify-content: space-evenly;
   margin:1rem 0;
+}
+.enlace__redes {
+  visibility: hidden;
+  &.visible{
+    visibility: visible;
+  }
+}
+.evento__vacio{
+
+  left: 1rem;
+  top:1rem;
+  right: 1rem;
+  bottom: 1rem;
+  background-color: color.$color-primary-0;
 }
