@@ -16,6 +16,7 @@ var videoUrl = [
             url: '3OuvIS4nrFI',
             artista: 'Julión Álvarez',
             txt: '  Julión Álvarez y su Norteño Banda será uno de los artistas encargados de inaugurar la Feria Nacional de Durango 2022 (Fenadu)',
+            img: 'julionalvarez',
             redes: {
                 instagram: "https://www.instagram.com/lospasosdejulion",
             }
@@ -25,6 +26,7 @@ var videoUrl = [
             url: 'bIINZGNVMVA',
             artista: 'La Disnastia Aguilar',
             txt: 'La fiesta de los duranguenses arrancará el 15 de julio con las voces de la dinastía Aguilar con Ángela, Pepe y Leonardo.',
+            img: 'dinastiaaguilar',
             redes: {
                 facebook: "https://www.facebook.com/pepeaguilaroficial",
                 twitter: "https://twitter.com/PepeAguilar",
@@ -39,6 +41,7 @@ var videoUrl = [
             url: 'wQLXVf4Huco',
             artista: 'Grandiosas',
             txt: 'Grandiosas, es un concepto musical con más de 10 años de éxito en el que grandes voces femeninas se unen en un mismo escenario para combinar su talento y belleza',
+            img: 'grandiosas',
             redes: {
                 facebook: 'https://es-la.facebook.com/GranDiosasEnConcierto/',
                 instagram: 'https://www.instagram.com/_grandiosas'
@@ -48,6 +51,7 @@ var videoUrl = [
             url: 'L-66l5G6WDQ',
             artista: 'Carín León',
             txt: 'Carín León está teniendo un notable éxito en México durante los últimos años y ahora estará en la FENADU 2022',
+            img: 'carinleon',
             redes: {
                 instagram: 'https://www.instagram.com/carinleonoficial/?hl=es',
                 facebook: 'https://es-la.facebook.com/carinleonoficial/',
@@ -61,6 +65,7 @@ var videoUrl = [
             url: 'a46jMPQ544w',
             artista: 'Bronco',
             txt: 'Los Fieles seguidores de Lupe y grupo Bronco disfrutarán de la música de este experimentado grupo con exitos clásico',
+            img: 'bronco',
             redes: {
                 instagram: 'https://www.instagram.com/grupobronco/?hl=es',
                 facebook: 'https://es-la.facebook.com/grupobronco',
@@ -76,6 +81,7 @@ var videoUrl = [
             url: 'TMT9MNM-NHg',
             artista: 'Jesse y Joy',
             txt: 'Jesse & Joy regresan a la capital de Durango, ahora como unos de los invitados estelares a la edición 2022 de la Feria Nacional Durango (Fenadu)',
+            img: 'jesseyjoy',
             redes: {
                 instagram: 'https://www.instagram.com/jesseyjoy/?hl=es',
                 facebook: 'https://es-la.facebook.com/JesseyJoyOficial',
@@ -88,11 +94,12 @@ var videoUrl = [
             url: 'wxExptOTPeQ',
             artista: 'Intocable',
             txt: 'Grupo Intocable vuelve a Durango en la FENADU, en la velaria.',
+            img: 'intocable',
             redes: {
                 instagram: 'https://www.instagram.com/grupointocable/?hl=es',
                 twitter: 'https://twitter.com/grupointocable?lang=es',
                 facebook: 'https://www.facebook.com/grupointocable',
-                yotube: 'https://www.youtube.com/channel/UCvQcMlXzM9JdAgzkBo1B0Ew',
+                youtube: 'https://www.youtube.com/channel/UCvQcMlXzM9JdAgzkBo1B0Ew',
             }
         }
 
@@ -103,6 +110,7 @@ var videoUrl = [
             url: 'Xzf2O1SaTPM',
             artista: 'Ramón Ayala',
             txt: 'El rey del Acordeon traerá sus clásicos a la Velaria de la Feria Durango 2022',
+            img: 'ramonayala',
             redes: {
                 instagram: 'https://www.instagram.com/iamramonayala/?hl=es',
                 twitter: 'https://twitter.com/iamramonayala?lang=es',
@@ -117,6 +125,7 @@ var videoUrl = [
             url: 'ZeOJ98mSOuE',
             artista: 'Siddhartha',
             txt: 'Únicos es el 4to disco de Siddhartha, incluye los sencillos “Tarde”, “El chico”. Debutando en los primeros lugares de las principales tiendas del país: Top 10 de éxitos en Mixup, No. 3 en el Chart General de iTunes, No. 1 en el Chart Alternativo y No. 1 en el Chart Alternativo Español.',
+            img: 'siddhartha',
             redes: {
                 instagram: 'https://www.instagram.com/iamsiddhartha/?hl=es-la',
                 twitter: 'https://twitter.com/iamsiddhartha?lang=es',
@@ -128,6 +137,7 @@ var videoUrl = [
             url: 'lIoG4zIrZSA',
             artista: 'Marisela',
             txt: 'Marisela rambién es conocida como "La Madonna Latina", "La reina de la música romántica" y "La dama de hierro". Hará gala de su hermosa voz en el palenque de la FENADU 2022',
+            img:'marisela',
             redes: {
                 instagram: 'https://www.instagram.com/mariselaofficial/?hl=es',
                 twitter: 'https://twitter.com/mariselatour?lang=es',
@@ -143,6 +153,7 @@ var videoUrl = [
             url: '4Suho4h6E2Y',
             artista: 'Los Tucanes de Tijuana',
             txt: 'Los Tucanes de Tijuana pondrán su especial ritmo en el concierto que darán en la FENADU 2022',
+            img: 'tucanesdetijuana',
             redes: {
                 instagram: 'https://www.instagram.com/lostucanesdetijuana/?hl=es',
                 twitter: 'https://twitter.com/lostucanesdetj',
@@ -154,6 +165,7 @@ var videoUrl = [
             url: '4Suho4h6E2Ym',
             artista: 'Los Sembradores',
             txt: 'Los Sembradores y Los Nuevos Ondeados estarán en el palenque de la FENADU 2022',
+            img:'sembradores',
             redes: {
                 instagram: 'https://www.instagram.com/losnuevosondeados_oficial/?hl=es',
                 facebook: 'https://es-la.facebook.com/SEMBRADORES1',
@@ -168,6 +180,7 @@ var videoUrl = [
             url: 'ki24KRJg0Mk',
             artista: 'Edith Marquez',
             txt: 'Edith es considerada como La Reina de los Palenques de México, pues es la artistas con más presentaciones masivas en este tipo de recintos tan populares en México',
+            img:'edithmarquez',
             redes: {
                 instagram: 'https://www.instagram.com/edithmarquezlanda/?hl=es',
                 twitter: 'https://twitter.com/edithmarquezl',
@@ -180,6 +193,7 @@ var videoUrl = [
             artista: 'Eden Muñoz',
             txt: 'Entre 2010 y 2022, Muñoz fue el líder, compositor principal, productor de cabecera, vocalista, y acordeonista de Calibre 50. Con la agrupación, Muñoz logró obtener el récord de más canciones que llegarían al #1 para un solista o agrupación del regional mexicano en la prestigiosa revista Billboard.\n' +
                 'Muñoz también ha sido compositor de varios éxitos de otros artistas del regional mexicano. ',
+            img:'edenmuñoz',
             redes: {
                 instagram: 'https://www.instagram.com/edenmunoz/',
                 facebook: 'https://et-ee.facebook.com/EdenMunozOficial',
@@ -194,6 +208,7 @@ var videoUrl = [
             url: 'bb-83gDJcso',
             artista: 'PLIM PLIM',
             txt: 'También los niños disfrutarán de un gran expectaculo en PLIM PLIM y sus exitosos videos para niños.',
+            img:'plimplim',
             redes: {
                 instagram: 'https://www.instagram.com/plimplimoficial/',
                 twitter: 'https://twitter.com/PlimPlimOficial',
@@ -209,7 +224,8 @@ var videoUrl = [
         velaria: {
             url: 'y_4FyJFaa0U',
             artista: 'Majo Aguilar',
-            txt: '«No voy a llorar» (2021), el primer sencillo de su álbum ranchero Mi herencia, mi sangre, alcanzó el puesto número 1 de la lista Mexico Popular Airplay de Billboard.3​ ',
+            txt: '«No voy a llorar» (2021), el primer sencillo de su álbum ranchero Mi herencia, mi sangre, alcanzó el puesto número 1 de la lista Mexico Popular Airplay de Billboard.',
+            img:'majoaguilar',
             redes: {
                 instagram: 'https://www.instagram.com/majo__aguilar/',
                 facebook: 'https://es-la.facebook.com/majosaguilar',
@@ -225,6 +241,7 @@ var videoUrl = [
             url: 'yqQ0JfM876w',
             artista: 'Duelo',
             txt: 'Banda Norteña  que traera su múscia a la FENADU',
+            img:'duelo',
             redes: {
                 twitter: 'https://twitter.com/duelooficial?lang=es',
                 instagram: 'https://www.instagram.com/thegroupduelo/',
@@ -241,6 +258,7 @@ var videoUrl = [
             url: '2DhThYPRDDI',
             artista: 'Mijares',
             txt: 'Hombres y Mujeres disfrutarán de la gran devoz de uno de los artistas más queridos de méxico',
+            img: 'mijares',
             redes: {
                 twitter: 'https://twitter.com/mijaresoficial',
                 instagram: 'https://www.instagram.com/oficialmijares/',
@@ -257,6 +275,7 @@ var videoUrl = [
             url: '-9l5t3MWss8',
             artista: 'Juanes',
             txt: 'Ha sido premiado con 26 Grammy Latinos a lo largo de su trayectoria musical. Este es el mayor récord logrado por un cantante colombiano y el artista solista con más Grammy ganados. Además, ha vendido más de 16 millones de álbumes a nivel mundial. ',
+            img:'juanes',
             redes: {
                 instagram: 'https://www.instagram.com/juanes/',
                 twitter: 'https://twitter.com/juanes',
@@ -271,6 +290,7 @@ var videoUrl = [
             url: '2UyurpuaYMo',
             artista: 'Alemán',
             txt: 'Erick Raúl Alemán Ramírez, conocido como Alemán, es un rapero mexicano.',
+            img:'aleman',
             redes: {
                 instagram: 'https://www.instagram.com/mxalemanmx/',
                 facebook: 'https://www.facebook.com/MxAlemanMx',
@@ -280,6 +300,7 @@ var videoUrl = [
             url: 'lwAQhgqJTmg',
             artista: 'Pablo Montero',
             txt: 'Con más de veinte años de carrera Pablo Montero sigue enamorando a su público, y estará en la FENADU 2022',
+            img:'pablomontero',
             redes:{
                 instagram: 'https://www.instagram.com/pablomoficial/',
                 facebook: 'https://es-la.facebook.com/people/Pablo-Montero/100044393110783/',
@@ -296,6 +317,7 @@ var videoUrl = [
             url: 'nP8ZVJxiJlU',
             artista: 'Piso 21',
             txt: 'Piso 21 es una boy band colombiana de reguetón y pop, creada en Medellín en 2011',
+            img:'piso21',
             redes: {
                 twitter: 'https://twitter.com/piso21music',
                 instagram: 'https://www.instagram.com/piso21/',
@@ -305,6 +327,7 @@ var videoUrl = [
             url: 'TBusoJUAMqg',
             artista: 'Remmy Valenzuela',
             txt: 'Lanzó su álbum Mi princesa, del cual la canción «¿Por qué me ilusionaste?» logró ser incluida en la lista «Best Songs of 2015» por Ben Ratliff de The New York Times.',
+            img:'remmyvalenzuela',
             redes:{
                 instagram: 'https://www.instagram.com/remmyvalenzuela/',
                 facebook: 'https://es-la.facebook.com/RemmyValenzuela/',
@@ -321,6 +344,7 @@ var videoUrl = [
             url: '2V23jf1uWGo',
             artista: "90's Pop Tour",
             txt: '90\'s Pop Tour es el nombre de un álbum en vivo de la gira homónima, realizada por los artistas OV7, Aleks Syntek, Fey, Erik Rubín, JNS, Caló, The Sacados y Litzy',
+            img:'90tour',
             redes: {
                 instagram: 'https://www.instagram.com/90spoptour/',
                 facebook: 'https://es-la.facebook.com/90sPopTour/',
@@ -331,6 +355,7 @@ var videoUrl = [
             url: 'S5UEoLeza-o',
             artista: 'Banda MS',
             txt: 'La banda ha tocado canciones compuestas por Marco Antonio Solís, Joan Sebastian, Edén Muñoz, Horacio Palencia, Joss Favela y Espinoza Paz, entre otros. En septiembre de 2013, la Banda MS fue nominada a los premios Lunas del Auditorio en la categoría de Música Grupera.',
+            img:'bandams',
             redes:{
                 instagram: 'https://www.instagram.com/bandamsoficial/',
                 facebook: 'https://es-la.facebook.com/BANDAMSOFICIAL',

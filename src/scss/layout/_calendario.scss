@@ -105,8 +105,9 @@
   justify-content: space-evenly;
   margin:1rem 0;
 }
+
 .enlace__redes {
-  visibility: collapse;
+  visibility: visible;
   &.visible{
     visibility: visible;
   }
