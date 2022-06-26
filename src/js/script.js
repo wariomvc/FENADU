@@ -2,6 +2,7 @@ var scrollfuncion
 document.addEventListener('DOMContentLoaded', function () {
     console.log("Cargó a pagina")
     eventListeners();
+    generarEventosBotones();
 
 })
 let enlace_twitter = ' <div class="enlace__redes visible">\n' +
@@ -53,8 +54,8 @@ let enlace_yotube = '<div class="enlace__redes">\n' +
     '                                </div>';
 var scrollingState = false;
 
-var carta_palenque_Final;
-var carta_velaria_Final;
+var carta_palenque_Final ='';
+var carta_velaria_Final ='';
 
 function generarCards() {
     let templates_enlaces = {
@@ -91,7 +92,7 @@ function generarCards() {
                 '\n' +
                 '                        <p class="card__fecha">' + info.dia + ' de Julio</p>\n' +
                 '\n' +
-                '                    <a href="" class="boton">Ver Artista</a>\n' +
+                '                    <a url="'+info.palenque.url+'"  class="boton vervideo">Ver Video</a>\n' +
                 '                </div>\n' +
                 '            </div>';
         }
@@ -110,13 +111,61 @@ function generarCards() {
             '\n' +
             '                        <p class="card__fecha">' + info.dia + ' de Julio</p>\n' +
             '\n' +
-            '                    <a href="" class="boton">Ver Artista</a>\n' +
+            '                    <a url="'+info.velaria.url+'" class="boton vervideo">Ver Video</a>\n' +
             '                </div>\n' +
             '            </div>';
         carta_velaria_Final += template_card.replace('TEMPLATEENLACES', enlaces_redes);
-        carta_palenque_Final += template_card_palenque.replace('TEMPLATEENLACES', enlaces_redes);
+        carta_palenque_Final += template_card_palenque.replace('TEMPLATEENLACES', enlaces_redes_palenque);
 
     })
+
+}
+
+function generarEventosBotones(){
+    allbotones = document.querySelectorAll('.vervideo');
+    allbotones.forEach(boton=>{
+        url = boton.attributes.url;
+        boton.addEventListener('click', (e)=>{
+            mostrarVideo(e,url.value);
+        })
+    })
+}
+
+let playerVideo;
+
+function mostrarVideo(e,url) {
+    console.log(e.target.attributes.url.value);
+    const video = document.createElement('DIV');
+    video.id = "videoplayer";
+    const overlay = document.createElement('DIV');
+    overlay.appendChild(video);
+    overlay.classList.add('overlay');
+    overlay.addEventListener('click',()=>{
+        playerVideo.destroy();
+        overlay.remove();
+        const body = document.querySelector('body');
+        body.classList.remove('fijar-body');
+    })
+
+    const botonCerrar = document.createElement('P');
+    botonCerrar.textContent='X';
+    botonCerrar.classList.add('btn-cerrar')
+    overlay.appendChild(botonCerrar);
+
+    const body = document.querySelector('body');
+    body.classList.add('fijar-body')
+    body.appendChild(overlay);
+    
+    playerVideo = new YT.Player('videoplayer', {
+        videoId: e.target.attributes.url.value,
+        height: '337',
+        width: '600',
+        events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+        },
+        playerVars: {'autoplay': 0, 'controls': 0}
+    });
 
 }
 
@@ -143,7 +192,7 @@ function eventListeners() {
         let lista_cards = boton.parentNode.querySelector('.lista__cards');
 
         boton.addEventListener('mouseenter', (e) => {
-            listaCardsScroll(e, lista_cards, -5);
+            listaCardsScroll(e, lista_cards, -10);
         });
         boton.addEventListener('mouseleave', () => {
             clearInterval(scrollfuncion);
@@ -153,7 +202,7 @@ function eventListeners() {
         let lista_cards = boton.parentNode.querySelector('.lista__cards');
 
         boton.addEventListener('mouseenter', (e) => {
-            listaCardsScroll(e, lista_cards, 5);
+            listaCardsScroll(e, lista_cards, 10);
         });
         boton.addEventListener('mouseleave', () => {
             clearInterval(scrollfuncion);

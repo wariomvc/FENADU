@@ -78,7 +78,7 @@ var videoUrl = [
     {
         dia: 18,
         velaria: {
-            url: 'TMT9MNM-NHg',
+            url: '3Vzf5n5IKMQ',
             artista: 'Jesse y Joy',
             txt: 'Jesse & Joy regresan a la capital de Durango, ahora como unos de los invitados estelares a la edición 2022 de la Feria Nacional Durango (Fenadu)',
             img: 'jesseyjoy',
@@ -107,7 +107,7 @@ var videoUrl = [
     {
         dia: 20,
         velaria: {
-            url: 'Xzf2O1SaTPM',
+            url: 'pCBmMlEwDuY',
             artista: 'Ramón Ayala',
             txt: 'El rey del Acordeon traerá sus clásicos a la Velaria de la Feria Durango 2022',
             img: 'ramonayala',
@@ -122,7 +122,7 @@ var videoUrl = [
     {
         dia: 21,
         velaria: {
-            url: 'ZeOJ98mSOuE',
+            url: 'wif56j7Xd2c',
             artista: 'Siddhartha',
             txt: 'Únicos es el 4to disco de Siddhartha, incluye los sencillos “Tarde”, “El chico”. Debutando en los primeros lugares de las principales tiendas del país: Top 10 de éxitos en Mixup, No. 3 en el Chart General de iTunes, No. 1 en el Chart Alternativo y No. 1 en el Chart Alternativo Español.',
             img: 'siddhartha',
@@ -177,7 +177,7 @@ var videoUrl = [
     {
         dia: 23,
         velaria: {
-            url: 'ki24KRJg0Mk',
+            url: '22RIvL2WV54',
             artista: 'Edith Marquez',
             txt: 'Edith es considerada como La Reina de los Palenques de México, pues es la artistas con más presentaciones masivas en este tipo de recintos tan populares en México',
             img:'edithmarquez',
