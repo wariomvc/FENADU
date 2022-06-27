@@ -186,6 +186,9 @@ function eventListeners() {
         velaria.scrollLeft  = velaria.scrollLeft+delta;
     }); */
      let lista_cards = document.querySelector('.lista__cards');
+     velaria.addEventListener('touchmove', (e) => {
+        lastTouch =  e.changedTouches[0].pageX;
+     } );
     velaria.addEventListener('touchmove', (e) => {
         //listaCardsScroll(e, lista_cards, 10);
         if(lastTouch == null)
