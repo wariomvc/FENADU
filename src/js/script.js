@@ -177,6 +177,15 @@ function eventListeners() {
     palenque.innerHTML = carta_palenque_Final;
     //velaria.innerHTML = cartaHTML;
 
+    velaria.addEventListener('wheel', (e) => {
+        delta = e.deltaX*10;
+        if(delta>0){
+            delta = Math.min(25,delta);
+        }else if(delta<0)
+            delta = Math.max(-25,delta);
+        console.log(delta);
+        velaria.scrollLeft  = velaria.scrollLeft+delta;
+    });
     let enlaces = document.querySelectorAll("a[href^='#']");
     enlaces.forEach(enlace => {
         enlace.addEventListener('click', scroller);
@@ -208,13 +217,14 @@ function eventListeners() {
     botonRight.forEach(boton => {
         let lista_cards = boton.parentNode.querySelector('.lista__cards');
 
-        boton.addEventListener('scroll', (e) => {
+        boton.addEventListener('mouseenter', (e) => {
             listaCardsScroll(e, lista_cards, 10);
         });
+        
         /* boton.addEventListener('touchstart', (e) => {
             listaCardsScroll(e, lista_cards, 10);
         }); */
-        boton.addEventListener('mouseup', () => {
+        boton.addEventListener('mouseleave', () => {
             clearInterval(scrollfuncion);
         });
         /* boton.addEventListener('touchend', () => {
