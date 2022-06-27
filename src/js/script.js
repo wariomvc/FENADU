@@ -194,15 +194,15 @@ function eventListeners() {
         boton.addEventListener('mouseenter', (e) => {
             listaCardsScroll(e, lista_cards, -10);
         });
-        boton.addEventListener('touchstart', (e) => {
+        /* boton.addEventListener('touchstart', (e) => {
             listaCardsScroll(e, lista_cards, -10);
-        });
+        }); */
         boton.addEventListener('mouseleave', () => {
             clearInterval(scrollfuncion);
         });
-        boton.addEventListener('touchend', () => {
+        /* boton.addEventListener('touchend', () => {
             clearInterval(scrollfuncion);
-        });
+        }); */
         
     })
     botonRight.forEach(boton => {
@@ -211,15 +211,15 @@ function eventListeners() {
         boton.addEventListener('mouseenter', (e) => {
             listaCardsScroll(e, lista_cards, 10);
         });
-        boton.addEventListener('touchstart', (e) => {
+        /* boton.addEventListener('touchstart', (e) => {
             listaCardsScroll(e, lista_cards, 10);
-        });
+        }); */
         boton.addEventListener('mouseleave', () => {
             clearInterval(scrollfuncion);
         });
-        boton.addEventListener('touchend', () => {
+        /* boton.addEventListener('touchend', () => {
             clearInterval(scrollfuncion);
-        });
+        }); */
     })
 
     let botoncalendario = document.querySelectorAll('.calendario__dia');
