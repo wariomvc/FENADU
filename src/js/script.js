@@ -335,7 +335,7 @@ function listaCardsScroll(e, listaCards, scrollSize) {
     //scrollingOn = true;
     //listaCards = document.querySelector('.lista__cards');
 
-    scrollfuncion = setInterval(scrolling, 10, listaCards, scrollSize);
+    scrollfuncion = setInterval(scrolling, listaCards, scrollSize);
 
 
 }
