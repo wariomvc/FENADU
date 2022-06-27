@@ -217,14 +217,14 @@ function eventListeners() {
     botonRight.forEach(boton => {
         let lista_cards = boton.parentNode.querySelector('.lista__cards');
 
-        boton.addEventListener('mousedown', (e) => {
+        boton.addEventListener('pointerdown', (e) => {
             listaCardsScroll(e, lista_cards, 10);
         });
         
         /* boton.addEventListener('touchstart', (e) => {
             listaCardsScroll(e, lista_cards, 10);
         }); */
-        boton.addEventListener('mouseup', () => {
+        boton.addEventListener('pointerup', () => {
             clearInterval(scrollfuncion);
         });
         /* boton.addEventListener('touchend', () => {
