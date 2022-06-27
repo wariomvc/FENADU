@@ -1,9 +1,14 @@
 @use '../base/paleta' as color;
+@use '../base/mixins' as m;
 
 
 .genero {
-  height: 30rem;
-  padding: 5rem 20rem;
+  height: 32rem;
+  padding: 1.5rem 1.5rem;
+  @include m.desktop{
+    padding: 5rem 20rem;
+    height: 30rem;
+  }
 
 
   .genero__titulo, .genero__texto {

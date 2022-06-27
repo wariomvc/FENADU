@@ -1,5 +1,6 @@
 @use '../base/variables' as v;
 @use '../base/paleta' as color;
+@use '../base/mixins' as m;
 
 .hero {
     width: 100%;
@@ -32,7 +33,11 @@
         align-items: center;
         text-align: center;
         h1{
-            font-size: 8rem;
+            font-size: 6rem;
+            @include m.tablet{
+                font-size: 8rem;
+            }
+            
         }
         
     }
