@@ -192,11 +192,11 @@ function eventListeners() {
             lastTouch = e.changedTouches[0].pageX;
         else{
             if(lastTouch < e.changedTouches[0].pageX){
-                lista_cards.scrollLeft += -2;
+                lista_cards.scrollLeft += -4;
                 //console.log("Izquierda")
             }
             else if(lastTouch > e.changedTouches[0].pageX)
-                lista_cards.scrollLeft += +2;
+                lista_cards.scrollLeft += +4;
                 //console.log("derecha");
         }
         lastTouch = e.changedTouches[0].pageX;
