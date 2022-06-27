@@ -177,16 +177,23 @@ function eventListeners() {
     palenque.innerHTML = carta_palenque_Final;
     //velaria.innerHTML = cartaHTML;
 
-   /*  velaria.addEventListener('wheel', (e) => {
+     velaria.addEventListener('wheel', (e) => {
         delta = e.deltaX*10;
         if(delta>0){
             delta = Math.min(25,delta);
         }else if(delta<0)
             delta = Math.max(-25,delta);
         velaria.scrollLeft  = velaria.scrollLeft+delta;
-    }); */
-     let lista_cards = document.querySelector('.lista__cards');
-     velaria.addEventListener('touchmove', (e) => {
+    }); 
+    palenque.addEventListener('wheel', (e) => {
+        delta = e.deltaX*10;
+        if(delta>0){
+            delta = Math.min(25,delta);
+        }else if(delta<0)
+            delta = Math.max(-25,delta);
+        palenque.scrollLeft  = palenque.scrollLeft+delta;
+    }); 
+    velaria.addEventListener('touchstart', (e) => {
         lastTouch =  e.changedTouches[0].pageX;
      } );
     velaria.addEventListener('touchmove', (e) => {
@@ -203,7 +210,26 @@ function eventListeners() {
                 //console.log("derecha");
         }
         lastTouch = e.changedTouches[0].pageX;
-        console.log(e.changedTouches[0]);
+        //console.log(e.changedTouches[0]);
+    }); 
+    palenque.addEventListener('touchstart', (e) => {
+        lastTouch =  e.changedTouches[0].pageX;
+     } );
+    palenque.addEventListener('touchmove', (e) => {
+        //listaCardsScroll(e, lista_cards, 10);
+        if(lastTouch == null)
+            lastTouch = e.changedTouches[0].pageX;
+        else{
+            if(lastTouch < e.changedTouches[0].pageX){
+                palenque.scrollLeft += ( lastTouch - e.changedTouches[0].pageX)*2;
+                //console.log("Izquierda")
+            }
+            else if(lastTouch > e.changedTouches[0].pageX)
+                palenque.scrollLeft +=  ( lastTouch - e.changedTouches[0].pageX)*2;
+                //console.log("derecha");
+        }
+        lastTouch = e.changedTouches[0].pageX;
+        //console.log(e.changedTouches[0]);
     }); 
     let enlaces = document.querySelectorAll("a[href^='#']");
     enlaces.forEach(enlace => {
@@ -217,33 +243,33 @@ function eventListeners() {
     let botonRight = document.querySelectorAll(".boton__right");
 
     botonLeft.forEach(boton => {
-        //let lista_cards = boton.parentNode.querySelector('.lista__cards');
+        let lista_cards = boton.parentNode.querySelector('.lista__cards');
 
-        /* boton.addEventListener('mouseenter', (e) => {
+         boton.addEventListener('mouseenter', (e) => {
             listaCardsScroll(e, lista_cards, -10);
-        }); */
+        }); 
         /* boton.addEventListener('touchstart', (e) => {
             listaCardsScroll(e, lista_cards, -10);
         }); */
-        /* boton.addEventListener('mouseleave', () => {
+        boton.addEventListener('mouseleave', () => {
             clearInterval(scrollfuncion);
-        }); */
+        });
         /* boton.addEventListener('touchend', () => {
             clearInterval(scrollfuncion);
         }); */
         
     })
     botonRight.forEach(boton => {
-        //let lista_cards = boton.parentNode.querySelector('.lista__cards');
+        let lista_cards = boton.parentNode.querySelector('.lista__cards');
 
-        /* boton.addEventListener('mouseenter', (e) => {
+        boton.addEventListener('mouseenter', (e) => {
             listaCardsScroll(e, lista_cards, 10);
-        }); */
+        });
         
           
-       /*  boton.addEventListener('mouseleave', () => {
+        boton.addEventListener('mouseleave', () => {
             clearInterval(scrollfuncion);
-        }); */
+        });
         /* boton.addEventListener('touchend', () => {
             clearInterval(scrollfuncion);
         }); */
