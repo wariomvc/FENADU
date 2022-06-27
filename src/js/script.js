@@ -183,7 +183,6 @@ function eventListeners() {
             delta = Math.min(25,delta);
         }else if(delta<0)
             delta = Math.max(-25,delta);
-        console.log(delta);
         velaria.scrollLeft  = velaria.scrollLeft+delta;
     });
     let enlaces = document.querySelectorAll("a[href^='#']");
