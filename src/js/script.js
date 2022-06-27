@@ -168,7 +168,7 @@ function mostrarVideo(e,url) {
     });
 
 }
-
+let lastTouch = null;
 function eventListeners() {
     let velaria = document.querySelector('.rosa .velaria');
     let palenque = document.querySelector('.azul .palenque');
@@ -177,14 +177,31 @@ function eventListeners() {
     palenque.innerHTML = carta_palenque_Final;
     //velaria.innerHTML = cartaHTML;
 
-    velaria.addEventListener('wheel', (e) => {
+   /*  velaria.addEventListener('wheel', (e) => {
         delta = e.deltaX*10;
         if(delta>0){
             delta = Math.min(25,delta);
         }else if(delta<0)
             delta = Math.max(-25,delta);
         velaria.scrollLeft  = velaria.scrollLeft+delta;
-    });
+    }); */
+     let lista_cards = document.querySelector('.lista__cards');
+    velaria.addEventListener('touchmove', (e) => {
+        //listaCardsScroll(e, lista_cards, 10);
+        if(lastTouch == null)
+            lastTouch = e.changedTouches[0].pageX;
+        else{
+            if(lastTouch < e.changedTouches[0].pageX){
+                lista_cards.scrollLeft += 10;
+                //console.log("Izquierda")
+            }
+            else if(lastTouch > e.changedTouches[0].pageX)
+                lista_cards.scrollLeft += -10;
+                //console.log("derecha");
+        }
+        lastTouch = e.changedTouches[0].pageX;
+        console.log(e.changedTouches[0]);
+    }); 
     let enlaces = document.querySelectorAll("a[href^='#']");
     enlaces.forEach(enlace => {
         enlace.addEventListener('click', scroller);
@@ -197,35 +214,33 @@ function eventListeners() {
     let botonRight = document.querySelectorAll(".boton__right");
 
     botonLeft.forEach(boton => {
-        let lista_cards = boton.parentNode.querySelector('.lista__cards');
+        //let lista_cards = boton.parentNode.querySelector('.lista__cards');
 
-        boton.addEventListener('mouseenter', (e) => {
+        /* boton.addEventListener('mouseenter', (e) => {
             listaCardsScroll(e, lista_cards, -10);
-        });
+        }); */
         /* boton.addEventListener('touchstart', (e) => {
             listaCardsScroll(e, lista_cards, -10);
         }); */
-        boton.addEventListener('mouseleave', () => {
+        /* boton.addEventListener('mouseleave', () => {
             clearInterval(scrollfuncion);
-        });
+        }); */
         /* boton.addEventListener('touchend', () => {
             clearInterval(scrollfuncion);
         }); */
         
     })
     botonRight.forEach(boton => {
-        let lista_cards = boton.parentNode.querySelector('.lista__cards');
+        //let lista_cards = boton.parentNode.querySelector('.lista__cards');
 
-        boton.addEventListener('mouseenter', (e) => {
-            listaCardsScroll(e, lista_cards, 10);
-        });
-        
-        /* boton.addEventListener('touchstart', (e) => {
+        /* boton.addEventListener('mouseenter', (e) => {
             listaCardsScroll(e, lista_cards, 10);
         }); */
-        boton.addEventListener('mouseleave', () => {
+        
+          
+       /*  boton.addEventListener('mouseleave', () => {
             clearInterval(scrollfuncion);
-        });
+        }); */
         /* boton.addEventListener('touchend', () => {
             clearInterval(scrollfuncion);
         }); */
@@ -324,9 +339,8 @@ function cargarVideo(e) {
             'onStateChange': onPlayerStateChange
         }
     }); */
-function scrolling(element, nScroll) {
-    console.log(nScroll);
-    element.scrollLeft += nScroll;
+function scrolling(el, nScroll) {
+    el.scrollLeft += nScroll;
 }
 
 var scrollingOn = false;
@@ -334,8 +348,8 @@ var scrollingOn = false;
 function listaCardsScroll(e, listaCards, scrollSize) {
     //scrollingOn = true;
     //listaCards = document.querySelector('.lista__cards');
-
-    scrollfuncion = setInterval(scrolling, listaCards, scrollSize);
+    
+    scrollfuncion = setInterval(scrolling, 10, listaCards, scrollSize);
 
 
 }
